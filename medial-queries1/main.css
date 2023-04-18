@@ -1,3 +1,51 @@
+/* Applies to everything except divs  */
+/* *:not(div){
+  border: 1px solid red;
+} */
+/* 
+For Mobile devices: 320px-480px
+For Tablets or iPad: 480px - 768px
+For Laptop or small-size screen: 768px -1024px
+For Desktop or large-size screen: 1024px -1200px
+For Extra-large size device: 1200px and more */
+
+* {
+  border: 1px solid red;
+}
+
 body {
   background: blanchedalmond;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  min-height: 80vh;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.a {
+  min-height: 20vh;
+  flex-grow: 1;
+}
+
+.b {
+  min-height: 40vh;
+  flex-grow: 5
+}
+
+.c {
+  flex-grow: 2;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    flex-wrap:  wrap;
+  }
+  .b {
+    max-width: 60%;
+  }
 }
